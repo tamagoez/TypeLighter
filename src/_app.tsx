@@ -10,8 +10,10 @@
 // import '../styles/components/buttons.css'
 // https://zenn.dev/knaka0209/articles/b954ed2e85d3fa
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import 'styles/tailwind.css';
+import type { AppProps } from 'next/app';
 
-export default MyApp
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+export default MyApp;
