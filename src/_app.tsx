@@ -10,7 +10,8 @@
 // import '../styles/components/buttons.css'
 // https://zenn.dev/knaka0209/articles/b954ed2e85d3fa
 
-import 'styles/tailwind.css';
+import 'tailwindcss/tailwind.css'
+// import 'styles/tailwind.css';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
