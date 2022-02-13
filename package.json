@@ -7,6 +7,7 @@
   "dependencies": {
     "@tailwindcss/typography": "0.5.1",
     "autoprefixer": "10.4.2",
+    "daisyui": "2.0.0-next.0",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
     "react": "17.0.2",
@@ -32,6 +33,7 @@
     "husky": "^6.0.0"
   },
   "scripts": {
+    "dev": "tailwindcss build src/tailwind.css -o src/tailwind_dev.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -43,23 +45,14 @@
     "format-check": "npm run prettier -- --list-different",
     "validate": "npm-run-all --parallel type-check format-check lint build"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "husky": {
     "hooks": {
       "pre-commit": "CI=1 npm-run-all --parallel type-check && lint-staged"
     }
   },
   "lint-staged": {
-    "*.+(js|ts|tsx)": [
-      "yarn run lint"
-    ],
-    "*.+(js|json|ts|tsx)": [
-      "yarn run format"
-    ]
+    "*.+(js|ts|tsx)": ["yarn run lint"],
+    "*.+(js|json|ts|tsx)": ["yarn run format"]
   }
 }
